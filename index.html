@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGadget - Premium Electronics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Web App Structure -->
+    <header class="navbar">
+        <div class="logo">Nex<span>Gadget</span></div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+        </nav>
+        <div class="cart-icon" id="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="gradient-text">Future of Tech <br> is Here</h1>
+                <p>Discover the most premium electronic gadgets curated for you. Elevate your lifestyle.</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+            <div class="hero-image-container">
+                <div class="glow-orb"></div>
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=800&auto=format&fit=crop" alt="Premium Gadgets" class="hero-img floating">
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="products-section" id="products">
+            <div class="section-header">
+                <h2>Our Collection</h2>
+                <div class="filters" id="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="mobile">Mobiles</button>
+                    <button class="filter-btn" data-filter="watch">Watches</button>
+                    <button class="filter-btn" data-filter="headset">Headsets</button>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products dynamically injected via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NexGadget. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Modal overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items injected via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
